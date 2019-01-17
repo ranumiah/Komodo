@@ -26,7 +26,7 @@ namespace DatingApp.API.Data
             return user;
         }
 
-        private bool VerifyPasswordHash(string passsword, byte[] passwordHash, byte[] passwordSalt)
+        private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
