@@ -1,3 +1,12 @@
+### Entity Framework
+
+Seeding data best to drop and recreate database and then seed.
+
+dotnet ef database drop
+dotnet ef database update
+dotnet run
+
+
 
 ### Random JSON data generator tool
 
