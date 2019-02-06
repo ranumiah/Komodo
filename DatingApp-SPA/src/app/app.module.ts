@@ -27,6 +27,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { appRoutes } from './routes';
 import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
+import { MemberEditResolver } from './_resolver/member-edit.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -68,7 +69,8 @@ export function tokenGetter() {
       AuthGuard,
       UserService,
       MemberDetailResolver,
-      MemberListResolver
+      MemberListResolver,
+      MemberEditResolver
    ],
    bootstrap: [
       AppComponent
