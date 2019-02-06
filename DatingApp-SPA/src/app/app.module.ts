@@ -23,6 +23,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
 import { AuthGuard } from './_guards/auth.guard';
 import { appRoutes } from './routes';
+import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -60,7 +61,8 @@ export function tokenGetter() {
       ErrorInterceptorProvider,
       AlertifyService,
       AuthGuard,
-      UserService
+      UserService,
+      MemberDetailResolver
    ],
    bootstrap: [
       AppComponent
