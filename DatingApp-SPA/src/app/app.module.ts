@@ -30,6 +30,7 @@ import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
 import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -61,9 +62,10 @@ export function tokenGetter() {
            tokenGetter: tokenGetter,
            whitelistedDomains: ['localhost:5000'],
            blacklistedRoutes: ['localhost:5000/api/auth']
-         }
+         },
       }),
-      NgxGalleryModule
+      NgxGalleryModule,
+      FileUploadModule
    ],
    providers: [
       AuthService,
