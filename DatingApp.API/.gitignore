@@ -246,7 +246,7 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQLite
-*.db
+#*.db
 
 # SQL Server files
 *.mdf
