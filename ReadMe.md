@@ -6,7 +6,9 @@ dotnet ef database drop
 dotnet ef database update
 dotnet run
 
+### Usefull website
 
+https://caniuse.com/
 
 ### Random JSON data generator tool
 
