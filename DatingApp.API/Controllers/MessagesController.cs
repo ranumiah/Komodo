@@ -84,5 +84,19 @@ namespace DatingApp.API.Controllers
 
             return Ok(messages);
         }
+
+        // Dotnet Core can't tell the difference between HttpGet("{id}") and [HttpGet("{recipientId}")] event though the names are difference.
+        [HttpGet("thread/{recipientId}")]
+        public async Task<IActionResult> GetMessageThread(int userId, int recipientId)
+        {
+            if (userId != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var messagesFromRepo = await _repo.GetMessageThread(userId, recipientId);
+
+            var messageThread = _mapper.Map<IEnumerable<MessageToReturnDto>>(messagesFromRepo);
+
+            return Ok(messageThread);
+        }
     }
 }
