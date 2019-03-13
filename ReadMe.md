@@ -9,6 +9,7 @@ dotnet run
 ### Usefull website
 
 https://caniuse.com/
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments?view=aspnetcore-2.2
 
 ### Random JSON data generator tool
 
