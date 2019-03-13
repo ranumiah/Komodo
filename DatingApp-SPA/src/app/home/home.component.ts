@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     this.registerMode = true;
   }
 
+  //TODO: Remove all usage of this End-Point
   getValues() {
     this.http.get('http://localhost:5000/api/values').subscribe(response => {
       this.values = response;
